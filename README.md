@@ -4,8 +4,11 @@ Reddit clone frontend built using Angular. Backend built using Spring Boot, Spri
 
 # CREDITS
 
+- https://programmingtechie.com/2020/05/14/building-a-reddit-clone-with-spring-boot-and-angular/
 - https://github.com/SaiUpadhyayula/angular-reddit-clone
 - https://www.youtube.com/watch?v=DKlTBBuc32c
+
+# AngularRedditClone
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
