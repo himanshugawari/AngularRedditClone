@@ -1,10 +1,10 @@
-import { Injectable, EventEmitter, Output } from '@angular/core';
+import { Injectable, Output, EventEmitter } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { SignupRequestPayload } from '../signup/signup-request.payload';
 import { Observable, throwError } from 'rxjs';
-import { HttpClient } from '@angular/common/http';
+import { LocalStorageService } from 'ngx-webstorage';
 import { LoginRequestPayload } from '../login/login-request.payload';
 import { LoginResponse } from '../login/login-response.payload';
-import { LocalStorageService } from 'ngx-webstorage';
 import { map, tap } from 'rxjs/operators';
 
 @Injectable({
