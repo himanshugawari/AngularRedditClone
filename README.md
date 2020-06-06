@@ -1,5 +1,12 @@
 # AngularRedditClone
 
+Reddit clone frontend built using Angular. Backend built using Spring Boot, Spring Security with JPA Authentication, Spring Data JPA with MySQL, Spring MVC - https://github.com/himanshugawari/SpringRedditClone
+
+# CREDITS
+
+- https://github.com/SaiUpadhyayula/angular-reddit-clone
+- https://www.youtube.com/watch?v=DKlTBBuc32c
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
 
 ## Development server
