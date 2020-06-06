@@ -29,8 +29,9 @@
                     !loginForm.get('username').valid &&
                     loginForm.get('username').touched
                   "
-                  >Please provide a valid username</span
                 >
+                  Please provide a valid username
+                </span>
               </div>
             </div>
 
@@ -54,8 +55,9 @@
                     !loginForm.get('password').valid &&
                     loginForm.get('password').touched
                   "
-                  >Password cannot be empty</span
                 >
+                  Password cannot be empty
+                </span>
               </div>
             </div>
 
@@ -64,7 +66,7 @@
                 Login
               </button>
               <span style="padding-left: 15px;"
-                >New to SpringReddit? <a routerLink="/signup">SIGN UP</a></span
+                >New User? <a routerLink="/signup">SIGN UP</a></span
               >
             </span>
             <div class="login-failed" *ngIf="this.isError">
