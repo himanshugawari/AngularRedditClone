@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginRequestPayload } from './login-request.payload';
 import { AuthService } from '../shared/auth.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -48,14 +49,16 @@ export class LoginComponent implements OnInit {
     this.loginRequestPayload.username = this.loginForm.get('username').value;
     this.loginRequestPayload.password = this.loginForm.get('password').value;
 
-    this.authService.login(this.loginRequestPayload).subscribe((data) => {
-      if (data) {
+    this.authService.login(this.loginRequestPayload).subscribe(
+      (data) => {
         this.isError = false;
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('');
         this.toastr.success('Login Successful');
-      } else {
+      },
+      (error) => {
         this.isError = true;
+        throwError(error);
       }
-    });
+    );
   }
 }
